@@ -103,6 +103,9 @@
     if (_logFormatter) {
         logMsg = [_logFormatter formatLogMessage:logMessage];
     }
+
+    if (logMsg == nil)
+        return;
     
     //Check if last character is newLine
     unichar lastChar = [logMsg characterAtIndex:logMsg.length-1];
